@@ -8,7 +8,7 @@ public class Job {
     private String maxSalary;
     private String location;
 
-    public Job(String title, Long id, String minSalary, String description, String maxSalary, String location) {
+    public Job(Long id, String title, String minSalary, String description, String maxSalary, String location) {
         this.title = title;
         this.id = id;
         this.minSalary = minSalary;
