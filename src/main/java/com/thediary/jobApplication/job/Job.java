@@ -1,12 +1,23 @@
 package com.thediary.jobApplication.job;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Job_Table")
 public class Job {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
     private String minSalary;
     private String maxSalary;
     private String location;
+
+
+    public Job() {
+    }
 
     public Job(Long id, String title, String minSalary, String description, String maxSalary, String location) {
         this.title = title;
