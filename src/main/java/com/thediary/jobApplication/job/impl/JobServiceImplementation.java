@@ -24,7 +24,7 @@ public class JobServiceImplementation implements JobService {
     }
 
     @Override
-    public Job getJob(long id) {
+    public Job getJob(Long id) {
         for (Job job : jobs){
             if (job.getId().equals(id)){
                 return job;
@@ -33,4 +33,33 @@ public class JobServiceImplementation implements JobService {
         }
         return null;
     }
+
+    @Override
+    public boolean deleteJobById(Long id) {
+
+        for (Job job: jobs){
+            if (job.getId().equals(id)) {
+                jobs.remove(job);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updateJob(Long id, Job job) {
+
+        for(Job j: jobs){
+            if(j.getId().equals(id)){
+                j.setTitle(job.getTitle());
+                j.setDescription(job.getDescription());
+                j.setMinSalary(job.getMinSalary());
+                j.setMaxSalary(job.getMaxSalary());
+                j.setLocation(job.getLocation());
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

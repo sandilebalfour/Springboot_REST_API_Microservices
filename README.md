@@ -15,3 +15,12 @@ Learning how to create a REST API using Spring Boot. This covers creating data m
 
 ## Get : localhost:/jobs
 -- Get all jobs. Returns all jobs in a list.
+
+## Get : localhost:/jobs/{id}
+-- Gets a specific job using an id..
+
+## Delete : localhost:/jobs/{id}
+-- Deletes a specific Job using an ID..
+
+## Post : localhost:/jobs{id}
+-- Updates a specific Job using an ID and updates the job. 
