@@ -22,5 +22,31 @@ Learning how to create a REST API using Spring Boot. This covers creating data m
 ## Delete : localhost:/jobs/{id}
 -- Deletes a specific Job using an ID..
 
-## Post : localhost:/jobs{id}
+## PUT : localhost:/jobs{id}
 -- Updates a specific Job using an ID and updates the job. 
+
+
+# COMPANIES
+
+## GET : /companies
+
+## GET : /companies/{id}
+
+## PUT : /companies/{id}
+
+## POST : /companies
+ 
+## DELETE : /companies/{id}
+
+
+# REVIEWS
+
+## GET : /companies/{companyId}/reviews
+
+## GET : /companies/{companyId}/reviews/{reviewId}
+
+## PUT : /companies/{companyId}/reviews/{reviewId}
+
+## POST : /companies/{companyId}/reviews
+
+## DELETE : /companies/{companyId}/reviews/{reviewId}
