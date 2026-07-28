@@ -10,7 +10,7 @@ public class Review {
 
     @Id
     private Long id;
-    private String name;
+    private String rating;
 
     @ManyToOne
     private Company company;
@@ -26,11 +26,11 @@ public class Review {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getRating() {
+        return rating;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.rating = name;
     }
 }

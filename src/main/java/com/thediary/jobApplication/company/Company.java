@@ -1,5 +1,6 @@
 package com.thediary.jobApplication.company;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.thediary.jobApplication.job.Job;
 import com.thediary.jobApplication.reviews.Review;
 import jakarta.persistence.*;
@@ -17,9 +18,11 @@ public class Company {
 
     //One-to-many; every company has a list of jobs
     //This describes the relationship between company entity & Job Entity
+    @JsonIgnore
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "company")
     private List<Review> reviews;
 

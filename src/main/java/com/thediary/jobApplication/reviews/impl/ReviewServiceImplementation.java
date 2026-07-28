@@ -23,21 +23,27 @@ public class ReviewServiceImplementation implements ReviewService {
 
     @Override
     public Review getReviewById(Long id) {
-        return null;
+        return reviewRepository.findById(id).orElse(null);
     }
 
     @Override
     public void createReview(Review review) {
-
+        reviewRepository.save(review);
     }
 
     @Override
     public boolean deleteReviewById(Long id) {
-        return false;
+        if (reviewRepository.existsById(id)){
+            reviewRepository.deleteById(id);
+            return true;
+        }
+        else
+            return false;
     }
 
     @Override
     public boolean updateReviewById(Long id) {
+
         return false;
     }
 }

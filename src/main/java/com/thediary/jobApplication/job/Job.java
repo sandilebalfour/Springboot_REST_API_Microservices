@@ -19,14 +19,6 @@ public class Job {
     @ManyToOne
     private Company company;
 
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
-
     public Job() {
     }
 
@@ -38,7 +30,13 @@ public class Job {
         this.maxSalary = maxSalary;
         this.location = location;
     }
+    public Company getCompany() {
+        return company;
+    }
 
+    public void setCompany(Company company) {
+        this.company = company;
+    }
     public Long getId() {
         return id;
     }
