@@ -12,7 +12,7 @@ public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
     private String companyName;
     private String description;
 
@@ -22,27 +22,17 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
-
-    public Long getId() {
-        return Id;
-    }
-
-    public void setId(Long id) {
-        Id = id;
-    }
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "company")
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviews;
 
     public Company(){}
 
-    public Long getCompanyId() {
-        return Id;
+    public Long getId() {
+        return id;
     }
 
-    public void setCompanyId(Long companyId) {
-        this.Id = companyId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCompanyName() {

@@ -18,8 +18,7 @@ public class Review {
     @ManyToOne
     private Company company;
 
-    public Review() {
-    }
+    public Review() {}
 
     public Long getId() {
         return id;
@@ -61,7 +60,5 @@ public class Review {
         this.rating = rating;
     }
 
-    public void setName(double rate) {
-        this.rating = rate;
-    }
+
 }
