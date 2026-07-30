@@ -1,5 +1,5 @@
 # Springboot_REST_API_Microservices
-Learning how to create a REST API using Spring Boot. This covers creating data models, establishing controller endpoints, and managing job data.
+Learning how to create a REST APIs using Spring Boot. This covers creating data models, establishing controller endpoints, and managing job data.
 
 ## Post : localhost:8080/jobs
 -- Create a job.
@@ -16,13 +16,13 @@ Learning how to create a REST API using Spring Boot. This covers creating data m
 ## Get : localhost:/jobs
 -- Get all jobs. Returns all jobs in a list.
 
-## Get : localhost:/jobs/{id}
+## Get : localhost:8080/jobs/{id}
 -- Gets a specific job using an id..
 
-## Delete : localhost:/jobs/{id}
+## Delete : localhost:8080/jobs/{id}
 -- Deletes a specific Job using an ID..
 
-## PUT : localhost:/jobs{id}
+## PUT : localhost:8080/jobs{id}
 -- Updates a specific Job using an ID and updates the job. 
 
 
