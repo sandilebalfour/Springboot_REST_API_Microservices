@@ -22,6 +22,15 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
     @JsonIgnore
     @OneToMany(mappedBy = "company")
     private List<Review> reviews;
@@ -59,4 +68,12 @@ public class Company {
     public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
     }
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
 }

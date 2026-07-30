@@ -1,5 +1,7 @@
 package com.thediary.jobApplication.reviews.impl;
 
+import com.thediary.jobApplication.company.Company;
+import com.thediary.jobApplication.company.CompanyService;
 import com.thediary.jobApplication.reviews.Review;
 import com.thediary.jobApplication.reviews.ReviewRepository;
 import com.thediary.jobApplication.reviews.ReviewService;
@@ -11,14 +13,16 @@ import java.util.List;
 public class ReviewServiceImplementation implements ReviewService {
 
     ReviewRepository reviewRepository;
+    CompanyService companyService;
 
-    public ReviewServiceImplementation(ReviewRepository reviewRepository) {
+    public ReviewServiceImplementation(ReviewRepository reviewRepository, CompanyService companyService) {
         this.reviewRepository = reviewRepository;
+        this.companyService = companyService;
     }
 
     @Override
-    public List<Review> getAllReviews() {
-        return reviewRepository.findAll();
+    public List<Review> getAllReviews(Long companyId) {
+        return reviewRepository.findByCompanyId(companyId);
     }
 
     @Override
@@ -27,8 +31,15 @@ public class ReviewServiceImplementation implements ReviewService {
     }
 
     @Override
-    public void createReview(Review review) {
-        reviewRepository.save(review);
+    public boolean addReview(Long companyId, Review review) {
+        Company company = companyService.getCompany(companyId);
+        if (company != null){
+            review.setCompany(company);
+            reviewRepository.save(review);
+            return true;
+        }
+        return false;
+
     }
 
     @Override

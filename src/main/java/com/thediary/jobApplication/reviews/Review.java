@@ -1,17 +1,20 @@
 package com.thediary.jobApplication.reviews;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.thediary.jobApplication.company.Company;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Review {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String rating;
+    private String title;
+    private String description;
+    private double rating;
 
+    @JsonIgnore
     @ManyToOne
     private Company company;
 
@@ -26,11 +29,39 @@ public class Review {
         this.id = id;
     }
 
-    public String getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public void setName(String name) {
-        this.rating = name;
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public void setName(double rate) {
+        this.rating = rate;
     }
 }
