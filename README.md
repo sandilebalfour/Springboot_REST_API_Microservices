@@ -28,25 +28,25 @@ Learning how to create a REST APIs using Spring Boot. This covers creating data 
 
 # COMPANIES
 
-## GET : /companies
+## GET :  localhost:8080/companies
 
-## GET : /companies/{id}
+## GET :  localhost:8080/companies/{id}
 
-## PUT : /companies/{id}
+## PUT :  localhost:8080/companies/{id}
 
-## POST : /companies
+## POST :  localhost:8080/companies
  
-## DELETE : /companies/{id}
+## DELETE :  localhost:8080/companies/{id}
 
 
 # REVIEWS
 
-## GET : /companies/{companyId}/reviews
+## GET :  localhost:8080/companies/{companyId}/reviews
 
-## GET : /companies/{companyId}/reviews/{reviewId}
+## GET :  localhost:8080/companies/{companyId}/reviews/{reviewId}
 
-## PUT : /companies/{companyId}/reviews/{reviewId}
+## PUT :  localhost:8080/companies/{companyId}/reviews/{reviewId}
 
-## POST : /companies/{companyId}/reviews
+## POST :  localhost:8080/companies/{companyId}/reviews
 
-## DELETE : /companies/{companyId}/reviews/{reviewId}
+## DELETE :  localhost:8080/companies/{companyId}/reviews/{reviewId}
