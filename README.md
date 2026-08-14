@@ -1,5 +1,6 @@
 # Springboot_REST_API_Microservices
 Learning how to create a REST APIs using Spring Boot. This covers creating data models, establishing controller endpoints, and managing job data.
+The application is almost like linkedIn where a company sends/post their jobs or openings. The company has reviews of how good it is, in order to trust the company.
 
 ## Post : localhost:8080/jobs
 -- Create a job.
@@ -50,3 +51,8 @@ Learning how to create a REST APIs using Spring Boot. This covers creating data 
 ## POST :  localhost:8080/companies/{companyId}/reviews
 
 ## DELETE :  localhost:8080/companies/{companyId}/reviews/{reviewId}
+
+## Actuator
+-- A spring boot actuator is a built-in ready feature to monitor & manage your application.
+-- It gives you insight about your running application e.g. A dashboard in your car showing speed you are traveling in, temperature of you engine and fuel left.
+-- The benefit you get is that you can manage & monitor your app. 
