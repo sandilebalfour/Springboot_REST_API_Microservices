@@ -1,6 +1,6 @@
 package com.thediary.jobApplication.job;
 
-import com.thediary.jobApplication.company.Company;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -15,9 +15,7 @@ public class Job {
     private String minSalary;
     private String maxSalary;
     private String location;
-
-    @ManyToOne
-    private Company company;
+    private Long companyid;
 
     public Job() {
     }
@@ -30,13 +28,15 @@ public class Job {
         this.maxSalary = maxSalary;
         this.location = location;
     }
-    public Company getCompany() {
-        return company;
+
+    public Long getCompanyid() {
+        return companyid;
     }
 
-    public void setCompany(Company company) {
-        this.company = company;
+    public void setCompanyid(Long companyid) {
+        this.companyid = companyid;
     }
+
     public Long getId() {
         return id;
     }

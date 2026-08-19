@@ -1,11 +1,11 @@
 package com.thediary.jobApplication.job.impl;
 
+
 import com.thediary.jobApplication.job.Job;
 import com.thediary.jobApplication.job.JobRepository;
 import com.thediary.jobApplication.job.JobService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

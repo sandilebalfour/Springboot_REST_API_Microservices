@@ -61,3 +61,9 @@ The application is almost like linkedIn where a company sends/post their jobs or
 -- docker run -d --name database -e POSTGRES_PASSWORD=secret postgres
 -- docker run -d --name pgadmin -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=secret dpage/pgadmin4
 -- docker exec -it pgadmin ping db
+
+microservices:
+services:
+company : port 8081
+jobs : port 8082
+reviews : port 8083
