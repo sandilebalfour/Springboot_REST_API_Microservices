@@ -56,3 +56,8 @@ The application is almost like linkedIn where a company sends/post their jobs or
 -- A spring boot actuator is a built-in ready feature to monitor & manage your application.
 -- It gives you insight about your running application e.g. A dashboard in your car showing speed you are traveling in, temperature of you engine and fuel left.
 -- The benefit you get is that you can manage & monitor your app. 
+
+## PostgreSQL
+-- docker run -d --name database -e POSTGRES_PASSWORD=secret postgres
+-- docker run -d --name pgadmin -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=secret dpage/pgadmin4
+-- docker exec -it pgadmin ping db
